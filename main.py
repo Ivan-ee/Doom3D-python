@@ -14,8 +14,9 @@ class Game:
     def new_game(self):
         self.map = Map(self)
 
-    def Update(self):
+    def update(self):
         pg.display.flip()
+        self.clock.tick()
         pg.display.set_caption(f'{self.clock.get_fps() :.1f}')
 
     def draw(self):
